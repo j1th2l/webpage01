@@ -1,20 +1,38 @@
-body{
-    font-size: 36px;
-    text-align: center;
-    border: 10px solid green;
-}
-/* order matters */
-/* LVHA */
-/* Link Visited Hover Active */
-a:link{
-    color: green;
-}
-a:visited {
-    color: blue;
-}
-a:hover {
-    color: red;
-}
-a:active {
-    color: yellow;
-}
+/* Selects the first element of its parent */
+		p:first-child {
+			color: red;
+		}
+		
+/* Selects the last element of its parent */
+		p:last-child {
+			color: blue;
+		}
+		
+/* Selects even numbered elements */
+		p:nth-child(even) {
+			color: green;
+		}
+		
+/* Selects odd numbered elements */
+		p:nth-child(odd) {
+			color: purple;
+		}
+		
+/* Selects the 3rd element */
+		p:nth-child(3) {
+			color: orange;
+		}
+		
+/* Selects elements that are the only child of their parent */
+		p:only-child() {
+			color: pink;
+		}
+		
+/* Selects elements that are the second child of their parent */
+		p:nth-child(2) {
+			color: brown;
+		}
+		
+/* Selects elements that are the third child of their parent and have a class of 'special' */
+		p:nth-child(3) special {
+			color: gray;
