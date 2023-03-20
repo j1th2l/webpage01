@@ -1,0 +1,21 @@
+/* Link styles */
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+/* Visited link styles */
+a:visited {
+  color: purple;
+}
+
+/* Hover styles */
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+/* Active styles */
+a:active {
+  color: green;
+}
