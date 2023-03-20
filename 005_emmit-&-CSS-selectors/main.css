@@ -1,0 +1,15 @@
+        li {
+            color: red;
+        }
+
+        #list-item-50 {
+            color: blue;
+        }
+
+        .list-item-even {
+            color: green;
+        }
+
+        .list-item-odd {
+            color: purple;
+        }
