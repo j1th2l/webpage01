@@ -1,0 +1,21 @@
+/* Select all divs, ps, and h1s and apply the following styles */
+div, p, h1 {
+  width: 100%;
+  height: 50px;
+  border: 1px solid black;
+}
+
+/* Change the color of all anchor elements */
+a {
+  color: blue;
+}
+
+/* Change the color of the anchor element when it is being hovered over */
+a:hover {
+  color: red;
+}
+
+/* Change the color of the anchor element when it has been visited */
+a:visited {
+  color: purple;
+}
