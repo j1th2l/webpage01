@@ -1,0 +1,13 @@
+		/* Style for the first letter */
+		p:first-letter {
+			font-size: 3em;
+			font-weight: bold;
+			color: #FF0000;
+		}
+		
+		/* Style for the first line */
+		p:first-line {
+			font-size: 1.2em;
+			font-style: italic;
+			color: #0000FF;
+		}
