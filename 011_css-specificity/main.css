@@ -1,0 +1,32 @@
+		div, p, h1 {
+			width: 200px;
+			height: 100px;
+			border: 1px solid black;
+		}
+		.class1 {
+			color: red; /* specificity: class */
+		}
+		#id1 {
+			color: blue; /* specificity: id */
+		}
+		p.class2 {
+			color: green; /* specificity: class + element */
+		}
+		div .class3 {
+			color: purple; /* specificity: class + descendant */
+		}
+		h1 + p {
+			color: orange; /* specificity: adjacent sibling */
+		}
+		div > p {
+			color: gray; /* specificity: direct descendant */
+		}
+		div:first-of-type {
+			color: brown; /* specificity: pseudo-class */
+		}
+		[class*="s"] {
+			color: teal; /* specificity: attribute containing */
+		}
+		div[class$="t"] {
+			color: pink; /* specificity: attribute ends with */
+		}
