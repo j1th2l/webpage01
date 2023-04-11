@@ -1,0 +1,51 @@
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5em;
+        }
+
+        nav a {
+            color: black;
+            padding: 0.5em;
+            text-decoration: none;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 1em;
+        }
+
+        section {
+            background-color: white;
+            padding: 0.5em;
+            width: 70%;
+        }
+
+        aside {
+            background-color: white;
+            padding: 0.5em;
+            width: 28%;
+        }
+
+        footer {
+            background-color: gray;
+            clear: both;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+
+        address {
+            font-style: normal;
+            margin-top: 1em;
+        }

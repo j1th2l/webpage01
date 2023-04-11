@@ -1,0 +1,54 @@
+      /* (1) Generic Serif Font */
+      body {
+        font-family: serif;
+      }
+      /* (2) Generic San-Serif Font */
+      p {
+        font-family: sans-serif;
+      }
+      /* (3) Google Font with Different Weights */
+      h2 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300; /* Light */
+      }
+      h3 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400; /* Regular */
+      }
+      h4 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600; /* Semi-bold */
+      }
+      h5 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700; /* Bold */
+      }
+      /* (4) Text Transformation */
+      .uppercase-italic {
+        ;
+        font-style: italic;
+        text-transform: uppercase
+      }
+      /* (5) Character Spacing */
+      .character-spacing {
+        letter-spacing: 2px;
+      }
+      /* (6) Text Shadow */
+      h1 {
+        text-shadow: 2px 2px 5px #000000;
+      }
+      /* (7) Link Underline */
+      a {
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      /* (8) Strikethrough */
+      .old-text {
+        text-decoration: line-through;
+      }
+      /* (9) Indentation */
+      .first-line-indent {
+        text-indent: 2em;
+      }
