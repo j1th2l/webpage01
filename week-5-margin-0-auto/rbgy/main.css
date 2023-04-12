@@ -2,8 +2,8 @@ div{
     border: 2px solid black;
     border-radius: 45px;
     display: inline-block;
-    height: 50px;
-    width: 100px;    
+    height: 100px;
+    width: 200px;    
 }
 .button1{
     background-color:red;
