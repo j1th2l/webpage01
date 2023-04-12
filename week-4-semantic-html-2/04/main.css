@@ -1,0 +1,64 @@
+/* reset default margin and padding */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* set up basic styles for body */
+body {
+    background-color: lightgray;
+    border: 1px solid black;
+    font-family: sans-serif;
+    padding: 10px;
+}
+
+/* header section */
+.header-1 {
+    background-color: lightblue;
+    padding: 5px;
+}
+
+/* navigation section */
+nav {
+    background-color: yellow;
+    padding: 5px;
+}
+
+/* main content section */
+main {
+    display: flex;
+}
+
+/* first header in main section */
+.header-2 {
+    background-color: lightgreen;
+    flex: 1;
+    padding: 5px;
+}
+
+/* first section in main section */
+.section-1 {
+    background-color: violet;
+    flex: 2;
+    padding: 5px;
+}
+
+/* second section in main section */
+.section-2 {
+    background-color: darkorange;
+    flex: 1;
+    padding: 5px;
+}
+
+/* aside section */
+aside {
+    background-color: orange;
+    flex: 1;
+    padding: 5px;
+}
+
+/* footer section */
+.footer-2 {
+    background-color: skyblue;
+    padding: 5px;
+}
