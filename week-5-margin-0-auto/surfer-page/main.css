@@ -8,7 +8,6 @@ body {
     margin: 0 auto;    
     width: 60%;
 }
-
 img {
     border: 10px ridge gold;
     border-radius: 100%;
@@ -17,11 +16,9 @@ img {
     margin: 0 auto;
     max-width: 260px;
 }
-
 primary {
     color: #0266C8;
 }
-
 secondary {
     color: #F90101;
 }
