@@ -1,4 +1,6 @@
-		body {
+
+
+body {
 			color: #333;
             font-family: Arial, sans-serif;
 			font-size: 16px;
@@ -11,13 +13,15 @@
 		text-align: center;
 	}
 
-logo.png {
-  background-image: url("logo.png");
-  background-size: cover;
-  width: 50%;
-  height: auto;
-	
-    
+logo {
+    background-image: url("logo.png");
+    background-size: cover;
+    height: auto;
+    width: 50%;
+}
+h1{
+   font-family: Agent Orange, sans-serif; 
+}
     nav {
 		background-color: darkslategray;
 		color: antiquewhite;
