@@ -1,0 +1,19 @@
+#container {
+align-items: flex-start;
+display: flex;
+justify-content: flex-end;
+padding: 20px;
+}
+#div1, #div2, #div3 {
+height: 80px;
+width: 500px;
+border: 1px solid black;
+text-align: left;
+vertical-align: top;
+}
+#div1, #div3 {
+flex-grow: 1;
+}
+#div2 {
+flex-grow: 2;
+}

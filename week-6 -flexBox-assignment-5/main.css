@@ -1,0 +1,32 @@
+body {
+    align-items: center;
+    background-color: white;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+      }
+.container {
+    align-items: center;
+    display: flex;
+    height: 267px;
+    justify-content: center;
+    width: 400px;
+      }
+      
+.left-box {
+    background-color: blue;
+    height: 266px;
+    width: 133px;
+      }
+      
+.top-right-box {
+    background-color: cadetblue;
+    height: 133px;
+    width: 267px;
+      }
+      
+.bottom-right-box {
+    background-color: skyblue;
+    height: 133px;
+    width: 267px;
+      }

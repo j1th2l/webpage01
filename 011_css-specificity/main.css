@@ -4,30 +4,46 @@ height:auto;
 padding:10px;
 width:auto;
 		}
+
 .class1 {
-color: red; /* specificity: class */
+    color: red; /* specificity: class */
 		}
-id1 {
-color: blue; /* specificity: id */
+
+.id1 {
+    color: blue; /* specificity: id */
 		}
-p {
-color: green; /* specificity: class + element */
+
+.p {
+    color: green; /* specificity: class + element */
 		}
-div .class3 {
+
+.h1 + p {
+    color: orange; /* specificity: adjacent sibling */
+		}
+
+.div .class3 {
 color: purple; /* specificity: class + descendant */
 		}
-h1 + p {
-color: orange; /* specificity: adjacent sibling */
-		}
+
 div > p {
 color: gray; /* specificity: direct descendant */
 		}
+
 div:first-of-type {
 color: brown; /* specificity: pseudo-class */
 		}
+
 s {
 color: teal; /* specificity: attribute containing */
 		}
+
 t {
 color: pink; /* specificity: attribute ends with */
 		}
+body id1 {
+    color: red; /* specificity: id + element */
+}
+
+.div .class3 {
+    color: purple; /* specificity: class + descendant */
+}
