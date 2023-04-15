@@ -1,83 +1,81 @@
 /* Reset margin and padding for html and body */
 html, body {
-  margin: 0;
-  padding: 0;
+margin: 0;
+padding: 0;
 }
 
 /* Set up flexbox for the body element */
 body {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
+display: flex;
+flex-direction: column;
+margin: 0;
+min-height: 100vh;
+padding: 0;
 }
 
 /* Apply box-sizing to all elements */
 * {
-  box-sizing: border-box;
+box-sizing: border-box;
 }
 
 /* Style for header */
 header {
-  background-color: lightgray;
-  padding: 20px;
-  text-align: center;
-  margin: 0;
+background-color: lightgray;
+padding: 20px;
+text-align: center;
+margin: 0;
 }
 
 /* Style for main section */
 main {
-  align-items: center;
-  display: flex;
-  flex: 1;
-  justify-content: center;
+align-items: center;
+display: flex;
+flex: 1;
+justify-content: center;
 }
 
 /* Style for article */
 article {
-  background-color: gray;
-  border: 1px solid #ccc;
-  overflow: hidden;
-  padding: 20px;
-  width: 200px;
+background-color: gray;
+border: 1px solid #ccc;
+overflow: hidden;
+padding: 20px;
+width: 200px;
 }
 
 /* Style for aside */
 aside {
-  position: absolute;
-  top: 188px;
-  width: calc(40% - 20px);
-  background-color: darkgray;
-  padding: 58px;
-  transform: translate(-1%, -50%);
-  right: -1px;
+position: absolute;
+top: 188px;
+width: calc(40% - 20px);
+background-color: darkgray;
+padding: 58px;
+transform: translate(-1%, -50%);
+right: -1px;
 }
-
-
 
 /* Style for footer */
 footer {
-  background-color: #ccc;
-  padding: 20px;
-  text-align: center;
-  margin: 0;
+background-color: #ccc;
+padding: 20px;
+text-align: center;
+margin: 0;
 }
 
 /* Style for address */
 address {
-  font-style: normal;
+font-style: normal;
 }
 
 /* Media query to adjust layout for small screens */
 @media screen and (max-width: 767px) {
-  /* Set flex direction to column for main section */
-  main {
-    flex-direction: column;
+/* Set flex direction to column for main section */
+main {
+flex-direction: column;
   }
 
-    p{
-        background-color: darkgray;
-        padding: 20px
-            box-height:20px;
+p{
+background-color: darkgray;
+padding: 20px
+
     }
