@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Base</title> 
+<meta name="matrix rain" author="Cbr" content="random numbers" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.cdnfonts.com/css/nintendo-ds-bios" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.4.js"
+integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+crossorigin="anonymous"></script>
+<style>
+body{
+background-image: url("");
+background-repeat: no-repeat;
+background-size: cover;
+font-family: 'Nintendo DS BIOS', sans-serif;
+font-color:white;
+}
+.navbar {
+display: flex;
+justify-content: space-between;
+flex-direction: row;
+align-items: center;
+padding: 15px;
+background-color: black;
+color: white;
+position: fixed;
+/*top: 0;*/
+left: 0;
+right: 0;
+z-index: 999;
+}
+.navbar-brand {
+font-size: 24px;
+font-weight: bold;
+color:white;
+text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px green, 0 0 70px green, 0 0 80px green, 0 0 100px green;
+}
+.navbar-toggle1, .navbar-toggle2 {
+font-size: 24px;
+cursor: pointer;
+background-color: transparent;
+border: none;
+color: white;
+}
+.navbar-menu1, .navbar-menu2 {
+display: flex;
+font-size: 24px;
+margin: 0;
+padding: 0;
+list-style: none;
+    
+}
+@media (max-width: 10808px) {
+.navbar-menu1, .navbar-menu2 {
+display: none;
+position: absolute;
+top: 100%;
+left: 0;
+right: 0;
+background-color: rgba(255, 0, 0, 0.3);
+padding:20px;
+}
+.navbar-menu1, .navbar-menu2, li {
+margin: 0;
+text-align: center;
+}
+.navbar-toggle1, navbar-toggle2 {
+display: block;
+}
+}
+a {
+color: white;
+background-color: rgba(0, 0, 0, 0.3);
+}    
+player{
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 999;
+}
+</style>
+</head>
+
+
+<body>
+<nav class="navbar">
+<button class="navbar-toggle1">&#9776;</button>
+<ul class="navbar-menu1">
+<li><a href="row/01/page01.html">Page01-Row01</a></li>
+<li><a href="row/02/page02.html">Page02-Row02</a></li>
+<li><a href="row/03/page03.html">Page03-Row03</a></li>
+<li><a href="row/04/page04.html">Page04-Row04</a></li>
+<li><a href="row/05/page05.html">Page05-Row05</a></li>
+<li><a href="row/06/page06.html">Page06-Row06</a></li>
+<li><a href="row/07/page07.html">Page07-Row07</a></li>
+<li><a href="row/08/page08.html">Page08-Row08</a></li>
+<li><a href="row/09/page09.html">Page09-Row09</a></li>
+</ul>  
+<a class="navbar-brand" href="#">Welcome</a>        
+<button class="navbar-toggle2">&#9776;</button>
+<ul class="navbar-menu2">
+<li><a href="column/01/page01.html">Page01-Column01</a></li>
+<li><a href="column/02/page02.html">Page02-Column02</a></li>
+<li><a href="column/03/page03.html">Page03-Column03</a></li>
+<li><a href="column/04/page04.html">Page04-Column04</a></li>
+<li><a href="column/05/page05.html">Page05-Column05</a></li>
+<li><a href="column/06/page06.html">Page06-Column06</a></li>
+<li><a href="column/07/page07.html">Page07-Column07</a></li>
+<li><a href="column/08/page08.html">Page08-Column08</a></li>
+<li><a href="column/09/page09.html">Page09-Column09</a></li>
+</ul>
+</nav>
+<video id="myVideo" src="myVideo.mp4" autoplay muted loop></video>
+<div style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:0;">
+<!-- your matrix animation code goes here -->
+<script>
+$(function() {
+// Hide both menus on page load
+$('.navbar-menu1, .navbar-menu2').hide();
+// Add event listeners to toggle menus
+$('.navbar-toggle1').on('click', function() {
+$('.navbar-menu2').slideUp();
+$('.navbar-menu1').slideToggle();
+});
+$('.navbar-toggle2').on('click', function() {
+$('.navbar-menu1').slideUp();
+$('.navbar-menu2').slideToggle();
+});
+}); 
+// Add an event listener to detect changes in the browser window size
+window.addEventListener('resize', function() {
+setVideoSize();
+});   
+'use strict';
+var cw, ch;
+const canvas = document.createElement("CANVAS");
+canvas.width = cw = window.innerWidth;
+canvas.height = ch = window.innerHeight;
+canvas.style.display = 'block';
+const ctx = canvas.getContext('2d');
+var matrix = '01110100 01101000 01100101 01101111 01101110 01100101'.split('');
+var rain = []
+onload = () => {
+document.body.style.background = 'black';
+document.body.append(canvas);
+for (let i=0; i<cw/2; i++)
+rain[i] = 1;    
+function raining(){
+ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+ctx.fillRect(0, 0, cw, ch);
+ctx.fillStyle ='turquoise';
+ctx.font = 10 + 'px arial';
+for (let j=0; j < rain.length; j++){
+var txt = matrix[Math.floor(Math.random() * matrix.length)];
+ctx.fillText(txt, j*10, rain[j] * 10);
+if(rain[j]*10 > ch && Math.random() > 0.975)
+rain[j] = 0;
+rain[j] ++;
+}
+}
+setInterval(raining, 50);
+}
+</script>
+<div id="player"></div>
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+let player;
+function onYouTubeIframeAPIReady() {
+player = new YT.Player('player', {
+videoId: 't-fB8sIVdX8',
+playerVars: {
+autoplay: 1,
+loop: 1,
+modestbranding: 1,
+controls: 0
+},
+events: {
+'onReady': onPlayerReady
+}
+});
+}
+function onPlayerReady(event) {
+event.target.setPlaybackQuality('hd1080');
+event.target.mute();
+event.target.playVideo();
+event.target.setLoop(true);
+event.target.setPlaybackRate(1);
+event.target.setSize(window.innerWidth, window.innerHeight);
+let videoElement = document.getElementsByTagName("iframe")[0];
+videoElement.style.opacity = "0.5";
+}
+</script>
+</div>
+</body>
+</html>

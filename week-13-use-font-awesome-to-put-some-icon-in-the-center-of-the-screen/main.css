@@ -1,0 +1,12 @@
+/* Centering styles */
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+/* Icon styles */
+.icon {
+font-size: 5rem;
+color: #333;
+}

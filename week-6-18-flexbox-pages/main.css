@@ -1,0 +1,28 @@
+		body {
+			background-color: black;
+			color: white;
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+
+		h1 {
+			font-size: 6em;
+			margin: 0;
+			padding-top: 100px;
+		}
+
+		#press-start {
+			position: absolute;
+			bottom: 100px;
+			left: 50%;
+			transform: translateX(-50%);
+			border: 2px solid white;
+			padding: 20px 40px;
+			font-size: 2em;
+			cursor: pointer;
+		}
+
+		#press-start:hover {
+			background-color: white;
+			color: black;
+		}

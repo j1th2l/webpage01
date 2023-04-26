@@ -1,0 +1,22 @@
+#container {
+align-items: center;
+display: flex;
+flex-direction:row;
+justify-content: flex-end;
+padding: 20px;
+}
+#div1, #div2, #div3 {
+align-items: center;
+background-color: indianred;
+border: 1px solid black;
+display: flex;
+font-size: 36px;
+font-weight: bold;
+height: 100px;
+justify-content: center;
+margin-bottom: 10px;
+margin-left: 10px;
+text-align: center;
+vertical-align: middle;
+width: 100px;
+}

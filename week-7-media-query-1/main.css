@@ -1,0 +1,9 @@
+h1 {
+  color: black; /* default color */
+}
+
+@media screen and (min-width: 1200px) {
+  h1 {
+    color: blue; /* color to change to */
+  }
+}
