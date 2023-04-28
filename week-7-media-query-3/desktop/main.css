@@ -13,24 +13,26 @@ margin: 20px auto;
 width: 80%;
 }
 nav {
-width: 100%;
+width: 15%;
 }
 main {
 padding: 10px;
-width: 100%;
+width: 85%;
 }
 nav, main {
 border: 2px solid red;
 }
 ul {
 display: flex;
-flex-flow: row wrap;
+flex-flow: column nowrap;
 justify-content: center;
 }
 li {
 list-style: none;
 padding: 10px;
+/* set font size to 3% of viewport width */
+font-size: 2vw;
 }
-section {
+/*section {*/
 margin-bottom: 10px;
 }
