@@ -1,0 +1,43 @@
+body, html, header, article, aside, footer {
+padding: 0;
+border: 0;
+margin: 0;
+box-sizing: border-box;
+}
+body {
+display: flex;
+flex-flow: wrap;
+}
+header, article, aside, footer {
+width: 100%;
+}
+body{
+font-weight: bold;
+}
+header, article, aside, footer {
+padding: 10px;
+text-align: center;
+}
+header {
+background: tomato;
+}
+article {
+text-align: left;
+background: deepskyblue;
+}
+aside:nth-child(3) {
+background: gold;
+align-content: flex-end;
+}
+aside:nth-child(4) {
+background: hotpink;
+}
+footer {
+background: lightgreen;
+}
+body {
+padding: 0 1em;
+}
+aside {
+width:50%;
+}

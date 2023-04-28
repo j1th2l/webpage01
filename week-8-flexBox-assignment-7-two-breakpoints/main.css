@@ -1,0 +1,57 @@
+body {
+background-color: black;
+color: white;
+font-family: 'Kernel Panic NBP', sans-serif;
+text-align: center;
+}
+
+.container {
+/*  display: flex;*/
+/*  justify-content: flex-start;*/
+/*  align-items: center;*/
+/*  height: 100vh;  set the container height to fill the viewport */
+}
+
+#press-start1 {
+  position: relative;  change position to relative 
+  margin-right: auto;  push the element to the left 
+  margin-left: 50%;  move the element to the middle of the container 
+  transform: translateX(-50%);  center the element horizontally 
+  display: flex;
+  align-items: flex-start;
+  border: 2px solid white;
+  padding: 20px 40px;
+  font-size: 2em;
+  cursor: pointer;
+    margin-bottom: 10px;
+}
+#press-start2 {
+  position: relative;  change position to relative 
+  margin-right: auto;  push the element to the left 
+  margin-left: 50%;  move the element to the middle of the container 
+  transform: translateX(-50%);  center the element horizontally 
+  display: flex;
+  align-items: flex-start;
+  border: 2px solid white;
+  padding: 20px 40px;
+  font-size: 2em;
+  cursor: pointer;
+        margin-bottom: 10px;
+}
+#press-start3 {
+  position: relative;  change position to relative 
+  margin-right: auto;  push the element to the left 
+  margin-left: 50%;  move the element to the middle of the container 
+  transform: translateX(-50%);  center the element horizontally 
+  display: flex;
+  align-items: flex-start;
+  border: 2px solid white;
+  padding: 20px 40px;
+  font-size: 2em;
+  cursor: pointer;
+        margin-bottom: 10px;
+}
+#press-start:hover {
+background-color: white;
+color: black;
+}

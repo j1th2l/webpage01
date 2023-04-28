@@ -1,26 +1,43 @@
-body {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: center;
+.container {
+border: 3px solid red;
+box-sizing: border-box;
+border-radius: 5px;
+padding: 50px;
+max-width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
 }
-div {
-    border: 2px solid black;
-    border-radius: 5px;
-    height: 100px;
-    margin: 10px 0;
-    width: 200px;
+.inner-box {
+border: 3px solid red; /* add a red border */
+/*box-sizing: border-box;*/
+display: flex;
+justify-content: center; 
+align-items: center; /* center items vertically */
+padding:30px;
+width: 600px
+}
+.box {
+max-width: 100%;
+padding: 10px; /* add padding to the outer box */
+}
+.box div {
+border: 2px solid black;
+border-radius: 5px;
+height: 100px;
+margin: 10px;
+width: 200px;
+max-width: 100%;
 }
 .button1 {
-    background-color: red;
+background-color: red;
 }
 .button2 {
-    background-color: blue;
+background-color: blue;
 }
 .button3 {
-    background-color: green;
+background-color: green;
 }
 .button4 {
-    background-color: yellow;
+background-color: yellow;
 }
