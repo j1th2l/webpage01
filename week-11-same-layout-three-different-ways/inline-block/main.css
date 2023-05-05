@@ -1,0 +1,33 @@
+.container {
+width: 100%;
+height: 180px;
+}
+.box1,.box2,.box3,.boxb {
+height: 100%;
+display: inline-block;
+vertical-align: top;
+}
+.box1 {
+border: 8px solid black;
+border-color: blue;
+background-color: yellow;
+width: 100%;
+}
+.box2 {
+border: 8px solid black;
+border-color: green;
+background-color: limegreen;
+width: 100%;
+}
+.boxb {
+border: 8px solid black;
+width: 30%;
+height: 94%;
+background-color: cyan;
+}
+.box3 {
+border: 8px solid black;
+border-color: red;
+background-color: purple;
+width: 100%;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Base</title>
+<link rel="stylesheet" href="main.css"/>
+<meta name="matrix rain" author="Cbr" content="random numbers" />
+</script>
+</head>
+<body>
+<audio id="audio">
+<source src="audio.mp3" type="audio/mpeg">
+<track src="lyrics.vtt" kind="subtitles" srclang="en" label="English" class="track">
+</audio>
+<div class="circle"></div>
+<!--Script begins-->
+<script>
+var circle = document.querySelector(".circle");
+var audio = document.querySelector("#audio");
+circle.addEventListener("click", function() {
+audio.play();});    
+//text animation//      
+var audio = document.querySelector("#audio");
+audio.addEventListener("cuechange", function() {
+var track = audio.textTracks[0];
+var cue = track.activeCues[0];
+var text = cue.text;
+// Display the text on the page//
+});
+audio.addEventListener("loadedmetadata", function() {
+// Enable text tracks for the audio file
+var track = audio.addTextTrack("subtitles", "English", "en");
+track.src = "lyrics.vtt";
+});    
+//matrix begins //         
+'use strict';
+var cw, ch;
+const canvas = document.createElement("CANVAS");
+canvas.width = cw = window.innerWidth;
+canvas.height = ch = window.innerHeight;
+canvas.style.display = 'block';
+const ctx = canvas.getContext('2d');
+var matrix = '01101111 01001111 01101111'.split('');
+var rain = [];
+var xPos = 0;
+var xDir = 1;
+var alpha = 0;
+var mousePos = { x: 0, y: 0 };
+onload = () => {
+document.body.style.background = 'black';
+document.body.append(canvas);
+for (let i = 0; i < cw / 10; i++) {
+rain[i] = [];
+for (let j = 0; j < ch / 10; j++) {
+rain[i][j] = 0;
+}
+}
+function raining() {
+ctx.fillStyle = `rgba(0, 0, 0, ${alpha})`;
+ctx.fillRect(0, 0, cw, ch);
+for (let i = 0; i < rain.length; i++) {
+for (let j = 0; j < rain[i].length; j++) {
+var distance = Math.sqrt((i * 10 + xPos - mousePos.x) ** 2 + (j * 10 - mousePos.y) ** 2);
+var colorIntensity = Math.max(0, 1 - distance / 100);
+ctx.fillStyle = `rgba(64, 224, 208, ${colorIntensity})`;
+ctx.font = 10 + 'px arial';
+var txt = matrix[Math.floor(Math.random() * matrix.length)];
+ctx.fillText(txt, i * 10 + xPos, j * 10);
+if (rain[i][j] * 10 > ch && Math.random() > 0.975) {
+rain[i][j] = 0;
+}
+rain[i][j]++;
+}
+}
+xPos += 0.4 * xDir;
+if (xPos >= cw - 5 || xPos <= 5) {
+xDir = -xDir;
+alpha = 1;
+}
+alpha -= -0.1;
+if (alpha < 0) {
+alpha = 0;
+} 
+//message.style.opacity = alpha; 10
+}
+setInterval(raining, 10);
+canvas.addEventListener('mousemove', e => {
+mousePos.x = e.clientX;
+mousePos.y = e.clientY;
+});
+}
+var circle = document.querySelector(".circle");
+var audio = document.querySelector("#audio");
+circle.addEventListener("click", function() {
+audio.play();
+});
+//text animation
+var audio = document.querySelector("#audio");
+audio.addEventListener("cuechange", function() {
+var track = audio.textTracks[0];
+var cue = track.activeCues[0];
+var text = cue.text;
+// Display the text on the page
+var textBox = document.createElement("div");
+textBox.innerText = text;
+textBox.classList.add("text-box");
+document.body.appendChild(textBox);
+setTimeout(() => {
+textBox.remove();
+}, 5000);
+});
+audio.addEventListener("loadedmetadata", function() {
+// Enable text tracks for the audio file
+var track = audio.addTextTrack("subtitles", "English", "en");
+track.src = "lyrics.vtt";
+}); 
+
+</script>
+</body>
+</html>

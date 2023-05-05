@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<link href="https://fonts.cdnfonts.com/css/magical-mystery-tour-outline-shadow" rel="stylesheet">
+<style>
+@import url('https://fonts.cdnfonts.com/css/magical-mystery-tour-outline-shadow');
+</style>
+<link rel="stylesheet" href="main.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" href="favicon.png">
+<title>Vintage TV</title>
+</head>
+<body>
+<div id="one">
+<img src="image.jpg" width="400" height="400">
+<div id="two">
+<iframe
+width="100%"
+height="100%"
+src="https://www.youtube.com/embed/E6jI3WhP2YE?controls=0" title="video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<button onclick="toggleFullScreen()">Full Screen</button>
+</div>
+<script>
+function toggleFullScreen() {
+var iframe = document.querySelector('iframe');
+if (iframe.requestFullscreen) {
+iframe.requestFullscreen();
+} 
+else if (iframe.webkitRequestFullscreen) { /* Safari */
+iframe.webkitRequestFullscreen();
+} 
+else if (iframe.msRequestFullscreen) { /* IE11 */
+iframe.msRequestFullscreen();
+}
+}
+</script>
+</body>
+</html>

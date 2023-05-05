@@ -1,0 +1,65 @@
+body{
+background-color: black;
+cursor:none;
+}
+.track {
+position: absolute;
+top: 0;
+left: 0;
+z-index: 1;
+}
+.text-box {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+/*background-color: rgba(0, 0, 0, 0.7);*/
+color: white;
+font-size: 2rem;
+padding: 10px 20px;
+border-radius: 5px;
+}
+.circle {
+width: 400px;
+height: 400px;
+border-radius: 50%;
+background-color: red;
+animation: color-change 0.6s infinite;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+/*cursor: pointer;*/
+}
+.circle:active {
+background-color: red;
+}
+.circle:active + #audio {
+display: block;
+}
+#audio {
+display: none;
+}
+@keyframes color-change {
+0%, 16.67% {
+background-color: red;
+}
+16.67%, 33.33% {
+background-color: orange;
+}
+33.33%, 50% {
+background-color: yellow;
+}
+50%, 66.67% {
+background-color: green;
+}
+66.67%, 83.33% {
+background-color: lightblue;
+}
+83.33%, 94% {
+background-color: indigo;
+}
+94%, 100% {
+background-color: red;
+}   
+}
