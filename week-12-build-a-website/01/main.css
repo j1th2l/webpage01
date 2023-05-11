@@ -1,0 +1,37 @@
+body {
+margin: 0;
+padding: 0;
+background-image: url('01.gif');
+background-size: cover;
+background-position: center;
+animation: zoom-in 10s ease-in-out infinite;
+}
+.header {
+background-color: rgba(0, 0, 0, 0.5);
+display: flex;
+height: 50px;
+justify-content: center;
+padding: 0 20px;
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 1;
+}
+.header a {
+color: white;
+font-size: 18px;
+line-height: 50px;
+margin: 0 20px;
+text-decoration: none;
+}
+@keyframes zoom-in {
+0% {
+transform: scale(1);
+}
+50% {
+transform: scale(1.05);
+}
+100% {
+transform: scale(1);
+}
+}

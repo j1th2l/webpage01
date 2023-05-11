@@ -1,49 +1,39 @@
 div, p, h1 {
-border: 0.5px solid black;
+border: 1px solid black;
 height:auto;
 padding:10px;
 width:auto;
-		}
-
+}
 .class1 {
-    color: red; /* specificity: class */
-		}
-
+color: red; /* specificity: class */
+}
 .id1 {
-    color: blue; /* specificity: id */
-		}
-
+color: blue; /* specificity: id */
+}
 .p {
-    color: green; /* specificity: class + element */
-		}
-
+color: green; /* specificity: class + element */
+}
 .h1 + p {
-    color: orange; /* specificity: adjacent sibling */
-		}
-
+color: orange; /* specificity: adjacent sibling */
+}
 .div .class3 {
 color: purple; /* specificity: class + descendant */
-		}
-
+}
 div > p {
 color: gray; /* specificity: direct descendant */
-		}
-
+}
 div:first-of-type {
 color: brown; /* specificity: pseudo-class */
-		}
-
+}
 s {
 color: teal; /* specificity: attribute containing */
-		}
-
-t {
-color: pink; /* specificity: attribute ends with */
-		}
-body id1 {
-    color: red; /* specificity: id + element */
 }
-
+p {
+color: pink; /* specificity: attribute ends with */
+}
+body {
+color: red; /* specificity: id + element */
+}
 .div .class3 {
-    color: purple; /* specificity: class + descendant */
+color: purple; /* specificity: class + descendant */
 }

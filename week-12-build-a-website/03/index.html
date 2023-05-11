@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Visual 3</title>
+<link rel="stylesheet" href="main.css"/>
+<link rel="stylesheet" href="main.js"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+<meta name="msapplication-TileColor" content="#000000">
+<meta name="theme-color" content="#ffffff">
+<meta name="matrix rain" author="Cbr" content="random numbers" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+</head>
+<body>
+<div class="header">
+<a href="../index.html">Home</a>
+<a href="../01/index.html">Visual 1</a>
+<a href="../02/index.html">Visual 2</a>
+<a href="../03/index.html">Visual 3</a>
+</div>
+<audio id="audio" src="audio.mp3" autoplay></audio>
+<div></div>
+</body>
+<script>
+'use strict';
+var cw, ch;
+const canvas = document.createElement("CANVAS");
+canvas.width = cw = window.innerWidth;
+canvas.height = ch = window.innerHeight;
+canvas.style.display = 'block';
+const ctx = canvas.getContext('2d');
+var matrix = '01010100 01101000 01100101 00100000 01001111 01101110 01100101'.split('');
+var angle = 0;
+var radius = Math.min(cw, ch) / 2;
+var audio = new Audio('audio.mp3');
+var audioCtx = new AudioContext();
+var analyser = audioCtx.createAnalyser();
+var source = audioCtx.createMediaElementSource(audio);
+source.connect(analyser);
+analyser.connect(audioCtx.destination);
+onload = () => {
+document.body.style.background = 'black';
+document.body.append(canvas);
+audio.play();
+function vortex(){
+angle += 0.1;
+ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+ctx.fillRect(0, 0, cw, ch);
+ctx.fillStyle ='turquoise';
+ctx.font = 10 + 'px arial';
+var bufferLength = analyser.frequencyBinCount;
+var dataArray = new Uint8Array(bufferLength);
+analyser.getByteFrequencyData(dataArray);
+for (let j=0; j < matrix.length; j++){
+var txt = matrix[j];
+var x = cw / 2 + Math.sin(angle + j * 0.1) * radius * (dataArray[j] / 255);
+var y = ch / 2 + Math.cos(angle + j * 0.1) * radius * (dataArray[j] / 255);
+ctx.fillText(txt, x, y);
+}
+}
+setInterval(vortex, 10);
+}
+</script>
+</html>
