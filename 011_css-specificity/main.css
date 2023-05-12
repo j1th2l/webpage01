@@ -1,39 +1,51 @@
+/* specificity: 1, 1, 1 */
 div, p, h1 {
 border: 1px solid black;
-height:auto;
-padding:10px;
-width:auto;
+height: auto;
+padding: 10px;
+width: auto;
 }
+/* specificity: 1 */
 .class1 {
-color: red; /* specificity: class */
+color: red;
 }
-.id1 {
-color: blue; /* specificity: id */
+/* specificity: 1 */
+#id1 {
+color: blue;
 }
-.p {
-color: green; /* specificity: class + element */
+/* specificity: 1, 1 */
+p.p {
+color: green;
 }
-.h1 + p {
-color: orange; /* specificity: adjacent sibling */
+/* specificity: 1, 1 */
+h1 + p {
+color: orange;
 }
-.div .class3 {
-color: purple; /* specificity: class + descendant */
+/* specificity: 1, 1 */
+div .class3 {
+color: purple;
 }
+/* specificity: 1, 1 */
 div > p {
-color: gray; /* specificity: direct descendant */
+color: gray;
 }
+/* specificity: 1 */
 div:first-of-type {
-color: brown; /* specificity: pseudo-class */
+color: brown;
 }
-s {
-color: teal; /* specificity: attribute containing */
+/* specificity: 1 */
+s[attribute="value"] {
+color: teal;
 }
-p {
-color: pink; /* specificity: attribute ends with */
+/* specificity: 1 */
+p[attribute$="value"] {
+color: pink;
 }
-body {
-color: red; /* specificity: id + element */
+/* specificity: 2, 1 */
+body#body-id {
+color: red;
 }
-.div .class3 {
-color: purple; /* specificity: class + descendant */
+/* specificity: 1, 1 */
+div .class3 {
+color: purple;
 }
