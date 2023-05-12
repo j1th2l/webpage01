@@ -16,10 +16,11 @@ position: fixed;
 top: 0;
 width: 100%;
 z-index: 1;
+font-family: 'Libre Barcode 39 Text', cursive;
 }
 .header a {
 color: white;
-font-size: 18px;
+font-size: 20px;
 line-height: 50px;
 margin: 0 20px;
 text-decoration: none;
