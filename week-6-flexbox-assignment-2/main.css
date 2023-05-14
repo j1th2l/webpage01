@@ -1,21 +1,18 @@
-#container {
+body {
 display: flex;
-justify-content: flex-end;
-align-items: flex-start;
-padding: 20px;
 }
-#div1, #div2, #div3 {
-width: 500px;
-height: 80px;
-background-color: azure;
-border: 1px solid black;
-text-align: left;
-vertical-align: top;
-box-sizing: border-box;
+div {
+border: 2px solid black;
+height: 250px;
+background-color: black;
 }
-#div1, #div3 {
+.flex1 {
 flex-grow: 1;
+background-color: red;
 }
-#div2 {
+.flex2 {
 flex-grow: 2;
+display: flex;
+justify-content: center;
+align-items: center;
 }
