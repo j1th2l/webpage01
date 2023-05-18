@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FRUVEG</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5ed55b">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+<header>
+<nav>
+<div class="hamburger-menu">
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+</div>
+<div class="logo">
+<h1>-FRUVEG-</h1>
+</div>
+<ul class="nav-links">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../products/index.html">Products</a></li>
+<li><a href="../about/index.html">About</a></li>
+<li><a href="../contact/index.html">Contact</a></li>
+<li><a href="../cart/index.html">Cart</a></li>
+</ul>
+</nav>
+<div class="slider">
+<div class="carousel">
+<div class="hero-image slide">
+<img src="../images/snow-peas.jpg" alt="Product Image">
+<div class="product-info">
+<h2>Snow Peas</h2>
+<p>5 lb. Box</p>
+<p class="price">$19.99</p>
+<button>Add to Cart</button>
+</div>
+</div>
+<div class="hero-image slide">
+<img src="../images/carrot.jpg" alt="Product Image">
+<div class="product-info">
+<h2>Carrots</h2>
+<p>5 lb. Box</p>
+<p class="price">$19.99</p>
+<button>Add to Cart</button>
+</div>
+</div>
+<div class="hero-image slide">
+<img src="../images/artichoke.jpg" alt="Product Image">
+<div class="product-info">
+<h2>Aritchoke Hearts</h2>
+<p>5 lb. Box</p>
+<p class="price">$19.99</p>
+<button>Add to Cart</button>
+</div>
+</div>
+</div>
+<div class="dots">
+<span class="dot active" onclick="currentSlide(0)"></span>
+<span class="dot" onclick="currentSlide(1)"></span>
+<span class="dot" onclick="currentSlide(2)"></span>
+</div>
+</div>
+<video src="../video.mp4" autoplay loop muted></video>
+</header>
+<main>
+<section class="products">
+<div class="product">
+<img src="../images/artichoke.jpg" alt="Product 1">
+<div class="product-info">
+<h3>Artichoke</h3>
+<p>5 lb. Box</p>
+<p class="price">$19.99</p>
+<button>Add to Cart</button>
+</div>
+</div>
+<div class="product">
+<img src="../images/asparagus.jpg" alt="Product 2">
+<h3>bell-pepper</h3>
+<p>5 lb. Box</p>
+<p class="price">$19.99</p>
+<button>Add to Cart</button>
+</div>
+<div class="product">
+<img src="../images/bell-pepper.jpg" alt="Product 3">
+<h3>black-eyed-peas</h3>
+<p>5 lb. Box</p>
+<p class="price">$19.99</p>
+<button>Add to Cart</button>
+</div>
+<div class="product">
+<img src="../images/black-eyed-peas.jpg" alt="Product 4">
+<h3>Broccoli</h3>
+<p>5 lb. Box</p>
+<p class="price">$19.99</p>
+<button>Add to Cart</button>
+</div>
+<div class="product">
+<img src="../images/broccoli-on-wood.jpg" alt="Product 5">
+<h3>Jalapenos</h3>
+<p>5 lb. Box</p>
+<p class="price">$19.99</p>
+<button>Add to Cart</button>
+</div>
+<div class="product">
+<img src="../images/carrot.jpg" alt="Product 6">
+<h3>Onions</h3>
+<p>5 lb. Box</p>
+<p class="price">$19.99</p>
+<button>Add to Cart</button>
+</div>
+<div class="product">
+<img src="../images/cauliflower.jpg" alt="Product 7">
+<div class="product-info">
+<h3>Cauliflower</h3>
+<p>5 lb. Box</p>
+<p class="price">$19.99</p>
+<button>Add to Cart</button>
+</div>
+</div>
+<div class="product">
+<img src="../images/celery.jpg" alt="Product 8">
+<div class="product-info">
+<h3>Celery</h3>
+<p>5 lb. Box</p>
+<p class="price">$19.99</p>
+<button>Add to Cart</button>
+</div>
+</div>
+<div class="product">
+<img src="../images/cucumber.jpg" alt="Product 9">
+<div class="product-info">
+<h3>Cucumber</h3>
+<p>5 lb. Box</p>
+<p class="price">$19.99</p>
+<button>Add to Cart</button>
+</div>
+</div>
+<div class="product">
+<img src="../images/garlic.jpg" alt="Product 10">
+<div class="product-info">
+<h3>Garlic</h3>
+<p>5 lb. Box</p>
+<p class="price">$19.99</p>
+<button>Add to Cart</button>
+</div>
+</div>
+<div class="product">
+<img src="../images/ginger.jpg" alt="Product 11">
+<div class="product-info">
+<h3>Ginger</h3>
+<p>5 lb. Box</p>
+<p class="price">$19.99</p>
+<button>Add to Cart</button>
+</div>
+</div>
+<div class="product">
+<img src="../images/jalapeno.jpg" alt="Product 12">
+<div class="product-info">
+<h3>Jalepenos</h3>
+<p>5 lb. Box</p>
+<p class="price">$19.99</p>
+<button>Add to Cart</button>
+</div>
+</div>
+<div class="product">
+<img src="../images/kale.jpg" alt="Product 13">
+<div class="product-info">
+<h3>Kale</h3>
+<p>5 lb. Box</p>
+<p class="price">$19.99</p>
+<button>Add to Cart</button>
+</div>
+</div>
+<div class="product">
+<img src="../images/lettuce.jpg" alt="Product 14">
+<div class="product-info">
+<h3>Lettuce</h3>
+<p>5 lb. Box</p>
+<p class="price">$19.99</p>
+<button>Add to Cart</button>
+</div>
+</div>
+<div class="product">
+<img src="../images/onion.jpg" alt="Product 15">
+<div class="product-info">
+<h3>Onions</h3>
+<p>5 lb. Box</p>
+<p class="price">$19.99</p>
+<button>Add to Cart</button>
+</div>
+</div>
+<div class="product">
+<img src="../images/peanuts.jpg" alt="Product 16">
+<div class="product-info">
+<h3>Peanuts</h3>
+<p>5 lb. Box</p>
+<p class="price">$19.99</p>
+<button>Add to Cart</button>
+</div>
+</div>
+<div class="product">
+<img src="../images/potato.jpg" alt="Product 17">
+<div class="product-info">
+<h3>Potatos</h3>
+<p>5 lb. Box</p>
+<p class="price">$19.99</p>
+<button>Add to Cart</button>
+</div>
+</div>
+<div class="product">
+<img src="../images/pumpkin.jpg" alt="Product 18">
+<div class="product-info">
+<h3>Pumpkins</h3>
+<p>5 lb. Box</p>
+<p class="price">$19.99</p>
+<button>Add to Cart</button>
+</div>
+</div>
+<div class="product">
+<img src="../images/raddish.jpg" alt="Product 19">
+<div class="product-info">
+<h3>Raddish</h3>
+<p>5 lb. Box</p>
+<p class="price">$19.99</p>
+<button>Add to Cart</button>
+</div>
+</div>
+<div class="product">
+<img src="../images/snow-peas.jpg" alt="Product 20">
+<div class="product-info">
+<h3>Snow Peas</h3>
+<p>5 lb. Box</p>
+<p class="price">$19.99</p>
+<button>Add to Cart</button>
+</div>
+</div>
+<div class="product">
+<img src="../images/squash.jpg" alt="Product 21">
+<div class="product-info">
+<h3>Squash</h3>
+<p>5 lb. Box</p>
+<p class="price">$19.99</p>
+<button>Add to Cart</button>
+</div>
+</div>
+<div class="product">
+<img src="../images/tomato.jpg" alt="Product 22">
+<div class="product-info">
+<h3>Tomatoes</h3>
+<p>5 lb. Box</p>
+<p class="price">$19.99</p>
+<button>Add to Cart</button>
+</div>
+</div>
+<div class="product">
+<img src="../images/turmeric.jpg" alt="Product 23">
+<div class="product-info">
+<h3>Turmeric</h3>
+<p>5 lb. Box</p>
+<p class="price">$19.99</p>
+<button>Add to Cart</button>
+</div>
+</div>
+<div class="product">
+<img src="../images/watermelon.jpg" alt="Product 24">
+<div class="product-info">
+<h3>Watermelon</h3>
+<p>5 lb. Box</p>
+<p class="price">$19.99</p>
+<button>Add to Cart</button>
+</div>
+</div>
+<div class="product">
+<img src="../images/zucchini.jpg" alt="Product 25">
+<div class="product-info">
+<h3>Zucchini</h3>
+<p>5 lb. Box</p>
+<p class="price">$19.99</p>
+<button>Add to Cart</button>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<p>&copy; 2023 FRUVEG.<span class="material-symbols-outlined">
+nutrition
+</span><span class="material-symbols-outlined">
+cruelty_free
+</span> All rights reserved.</p>
+<div class="footer-links">
+<a href="../index.html">Home</a>
+<span class="dot"></span>
+<a href="../products/index.html">Products</a>
+<span class="dot"></span>
+<a href="../about/index.html">About</a>
+<span class="dot"></span>
+<a href="../contact/index.html">Contact</a>
+<span class="dot"></span>
+<a href="../cart/index.html">Cart</a>
+</div>
+<span class="material-symbols-outlined">
+psychiatrygrassgrassgrassgrassgrassgrassgrassgrassgrassgrassgrassgrassgrasspsychiatry
+</span>
+</footer>
+<script>const hamburger = document.querySelector('.hamburger-menu');
+const navLinks = document.querySelector('.nav-links');
+hamburger.addEventListener('click', () => {
+hamburger.classList.toggle('change');
+navLinks.classList.toggle('open');
+});
+let slideIndex = 0;
+const slides = document.getElementsByClassName('hero-image');
+const dots = document.getElementsByClassName('dot');
+function showSlide(n) {
+slideIndex = n;
+updateSlider();
+}
+function updateSlider() {
+for (let i = 0; i < slides.length; i++) {
+slides[i].style.display = 'none';
+dots[i].classList.remove('active');
+}
+slides[slideIndex].style.display = 'block';
+dots[slideIndex].classList.add('active');
+}
+function currentSlide(n) {
+showSlide(n);
+}
+function nextSlide() {
+if (slideIndex === slides.length - 1) {
+showSlide(0);
+} else {
+showSlide(slideIndex + 1);
+}
+}
+function previousSlide() {
+if (slideIndex === 0) {
+showSlide(slides.length - 1);
+} else {
+showSlide(slideIndex - 1);
+}
+}
+const dotCount = slides.length;
+let dotsHTML = '';
+for (let i = 0; i < dotCount; i++) {
+dotsHTML += '<span class="dot" onclick="currentSlide(' + i + ')"></span>';
+}
+document.querySelector('.dots').innerHTML = dotsHTML;
+dots[slideIndex].classList.add('active');
+updateSlider();
+setInterval(nextSlide, 5000);
+</script>
+</body>
+</html>
